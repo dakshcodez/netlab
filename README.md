@@ -14,6 +14,7 @@ A computer networks project that studies each layer at three levels:
 | 2 | [`phase2`](../../tree/phase2) | Error detection (checksum, CRC, Hamming), ARQ (SW, GBN, SR) |
 | 3 | [`phase3`](../../tree/phase3) | DNS hierarchy, TCP congestion control, pcap analyzer, dashboard, **final version** |
 
+- **New to the project? Start here:** [`docs/NetLab_Project_Guide.pdf`](docs/NetLab_Project_Guide.pdf), a plain-language guide to every phase
 - Full plan, deliverables and branch workflow: [`docs/PLAN.md`](docs/PLAN.md)
 - Environment setup: [`docs/SETUP.md`](docs/SETUP.md)
 
