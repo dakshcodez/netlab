@@ -8,6 +8,9 @@ dependencies = [
     "matplotlib>=3.8",
 ]
 
+[project.optional-dependencies]
+dashboard = ["streamlit>=1.35"]
+
 [dependency-groups]
 dev = [
     "pytest>=8",

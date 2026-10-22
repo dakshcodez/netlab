@@ -9,8 +9,10 @@ There are two environments:
 ## Dev machine
 
 ```bash
-uv sync            # creates .venv with dev dependencies
-uv run pytest      # run unit tests
+uv sync --extra dashboard   # creates .venv with dev dependencies and Streamlit
+make test                   # unit tests
+make sim                    # all experiments that need no root (a few minutes)
+make dashboard
 ```
 
 ## Testbed VM (Ubuntu 24.04)

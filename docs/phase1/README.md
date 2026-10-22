@@ -1,6 +1,6 @@
 # Phase 1: Testbed & Routing (Review 1)
 
-Owner: _member 1_ · Branch: `phase1` · Full plan: [`../PLAN.md`](../PLAN.md)
+Owner: _member 1_ · Full plan: [`../PLAN.md`](../PLAN.md)
 
 ## What's here
 

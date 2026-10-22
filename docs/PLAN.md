@@ -1,38 +1,46 @@
 # NetLab — Phase Plan
 
-Each phase maps to one review, is owned by one team member, and lives on its own branch.
+Each phase maps to one review and one team member. All work lives on `main`.
 Every topic is studied at three levels — **theory** (textbook formula), **simulation**
 (our own Python implementation) and **reality** (real Linux networking inside a Mininet
 testbed) — and the three are compared on the same plot.
 
-| Phase | Branch | Review | Owner | Theme |
+| Phase | Guide | Review | Owner | Theme |
 |---|---|---|---|---|
-| 1 | `phase1` | Review 1 | _member 1_ | Testbed foundation + network layer & routing |
-| 2 | `phase2` | Review 2 | _member 2_ | Reliable delivery: error detection + ARQ |
-| 3 | `phase3` | Review 3 | _member 3_ | DNS, TCP congestion control, analyzer, dashboard, **final integration** |
+| 1 | [`docs/phase1`](phase1/README.md) | Review 1 | _member 1_ | Testbed foundation + network layer & routing |
+| 2 | [`docs/phase2`](phase2/README.md) | Review 2 | _member 2_ | Reliable delivery: error detection + ARQ |
+| 3 | [`docs/phase3`](phase3/README.md) | Review 3 | _member 3_ | DNS, TCP congestion control, analyzer, dashboard, **final integration** |
 
-## Branch workflow
+## Status
 
-```
-main ──●─────────────●──────────────●──────────────●  (stable, merged after each review)
-        \           ↗ \            ↗ \            ↗
-phase1   ●──●──●──●    \          /   \          /
-                        \        /     \        /
-phase2                   ●──●──●        \      /
-                                         \    /
-phase3                                    ●──●  (final version)
-```
+Everything is integrated on `main`.
+"Run here" means verified on a development machine without root; "needs testbed" means the code is written
+and its pure logic is unit-tested, but the experiment itself needs Mininet/FRR/iperf3 on the Ubuntu VM and
+has **not been executed yet**.
 
-1. `main` holds the shared scaffold (results format, packaging, docs).
-2. Each owner works on their phase branch. Phase 2 and 3 can start immediately on the parts
-   that don't depend on the testbed (simulators, protocol code, analyzer).
-3. After Review 1, `phase1` is merged into `main`; `phase2` then merges `main` to pick up the
-   testbed. Same after Review 2 for `phase3`.
-4. `phase3` ends up containing everything and is the final version; it is merged into `main`
-   at the end.
+| Item | State |
+|---|---|
+| 1.1 VLSM planner, 1.3 topology model, 1.5 routing simulator, 1.8 count-to-infinity | done, run here |
+| 1.2 Packet Tracer lab | step-by-step guide done; the `.pkt` file has to be built in Packet Tracer |
+| 1.4 Mininet testbed, 1.6 trap, 1.7 convergence, 1.9 validation | needs testbed |
+| 2.1-2.4, 2.6 detection, injection, channel, theory | done, run here |
+| 2.5, 2.7 ARQ and experiments | done; theory + simulation + real UDP sockets (loopback relay) run here |
+| 2.8 ARQ on Mininet with netem | needs testbed (`experiments/phase2_arq_real.py`) |
+| 3.1 DNS codec | done, run here |
+| 3.2, 3.3 DNS hierarchy and latency | done; real UDP sockets on loopback run here; separate Mininet hosts + tcpdump need testbed |
+| 3.4 security demo | defensive half only: weak vs hardened resolver settings and the guess-space comparison (no attack code) |
+| 3.5, 3.6, 3.7 TCP experiments | simulator results run here; real Linux Reno/CUBIC/BBR, fairness, bufferbloat and the Reno overlay need testbed |
+| 3.8 analyzer | done; validated against simulator ground truth |
+| 3.9 dashboard | done |
+| 3.10 final integration, report | `make all`; [`REPORT.md`](REPORT.md) |
 
-Shared code in `netlab/common/` must be changed on `main` (or in a small PR to it) so all
-branches stay compatible.
+## Workflow
+
+Development happens on `main`; the former `phase1`/`phase2`/`phase3` branches were folded into it. Changes to `main` need approval from the repo owner (`.github/CODEOWNERS`), so use a short-lived
+feature branch and a pull request for anything non-trivial.
+
+Shared code in `netlab/common/` (results format, plot helpers) is used by every phase: keep its public
+interface stable, and update the dashboard and report if you change the results format.
 
 ---
 

@@ -99,3 +99,46 @@ COUNT_TO_INFINITY = {
         "dest": "D",
     },
 }
+
+
+def pair(bw_mbps: float = 100, delay_ms: float = 0.0) -> Topology:
+    """Two hosts on one direct link: the simplest testbed, used for ARQ over real UDP."""
+    nodes = {"h1": Node("h1", "host", (0, 0)), "h2": Node("h2", "host", (1, 0))}
+    links = [Link("h1", "h2", bw_mbps=bw_mbps, delay_ms=delay_ms, hosts=2)]
+    return Topology("pair", nodes, links, description=pair.__doc__ or "")
+
+
+def dumbbell(bottleneck_mbps: float = 10, bottleneck_delay_ms: float = 20, edge_mbps: float = 100) -> Topology:
+    """Two senders and two receivers sharing one bottleneck link (Phase 3 TCP experiments).
+
+        s1 ──┐                     ┌── d1
+             r1 ── bottleneck ── r2
+        s2 ──┘                     └── d2
+    """
+    nodes = {
+        "s1": Node("s1", "host", (0, 1)), "s2": Node("s2", "host", (0, 0)),
+        "r1": Node("r1", "router", (1, 0.5)), "r2": Node("r2", "router", (2, 0.5)),
+        "d1": Node("d1", "host", (3, 1)), "d2": Node("d2", "host", (3, 0)),
+    }
+    links = [
+        Link("s1", "r1", bw_mbps=edge_mbps, hosts=2),
+        Link("s2", "r1", bw_mbps=edge_mbps, hosts=2),
+        Link("r1", "r2", bw_mbps=bottleneck_mbps, delay_ms=bottleneck_delay_ms),
+        Link("r2", "d1", bw_mbps=edge_mbps, hosts=2),
+        Link("r2", "d2", bw_mbps=edge_mbps, hosts=2),
+    ]
+    return Topology("dumbbell", nodes, links, description=dumbbell.__doc__ or "")
+
+
+def dns_lab(link_delay_ms: float = 5.0) -> Topology:
+    """One router with five hosts: a client, a recursive resolver and the root, TLD and
+    example.lab servers. Every host-to-host path is two links, so a query to any server costs
+    4 x link_delay_ms of round-trip time.
+    """
+    names = ["client", "resolver", "root", "tld", "auth"]
+    nodes = {"r1": Node("r1", "router", (1, 0.5))}
+    links = []
+    for i, name in enumerate(names):
+        nodes[name] = Node(name, "host", (0 if i < 2 else 2, i % 3))
+        links.append(Link(name, "r1", bw_mbps=100, delay_ms=link_delay_ms, hosts=2))
+    return Topology("dns_lab", nodes, links, description=dns_lab.__doc__ or "")
