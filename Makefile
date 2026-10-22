@@ -1,9 +1,13 @@
-.PHONY: test sim sim-phase1 sim-phase2 sim-phase3 testbed testbed-phase1 testbed-phase2 testbed-phase3 dashboard all clean
+.PHONY: e2e test sim sim-phase1 sim-phase2 sim-phase3 testbed testbed-phase1 testbed-phase2 testbed-phase3 dashboard all clean
 
 PY_ROOT = sudo PYTHONPATH=. python3
 
 test:
 	uv run --extra dashboard pytest -q
+
+# Clean-clone end-to-end check (install, tests, every no-root experiment, CLIs, dashboard)
+e2e:
+	scripts/e2e.sh
 
 # --- simulation and loopback experiments: run anywhere, no root --------------------------
 sim: sim-phase1 sim-phase2 sim-phase3
