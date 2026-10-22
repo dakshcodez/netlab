@@ -27,6 +27,8 @@ uv sync --extra dashboard
 make test            # unit tests
 make sim             # every experiment that runs without root: simulations + real-socket loopback runs
 make dashboard       # interactive dashboard at http://localhost:8501
+make e2e             # clean-clone end-to-end check: install, tests, all experiments, CLIs, dashboard
+make e2e-netns       # ARQ + DNS across a real veth link with netem, in network namespaces (no root)
 make testbed         # real-network experiments (Ubuntu testbed VM, as root; see docs/SETUP.md)
 ```
 

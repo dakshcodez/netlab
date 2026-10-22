@@ -1,4 +1,4 @@
-.PHONY: e2e test sim sim-phase1 sim-phase2 sim-phase3 testbed testbed-phase1 testbed-phase2 testbed-phase3 dashboard all clean
+.PHONY: e2e e2e-netns test sim sim-phase1 sim-phase2 sim-phase3 testbed testbed-phase1 testbed-phase2 testbed-phase3 dashboard all clean
 
 PY_ROOT = sudo PYTHONPATH=. python3
 
@@ -8,6 +8,10 @@ test:
 # Clean-clone end-to-end check (install, tests, every no-root experiment, CLIs, dashboard)
 e2e:
 	scripts/e2e.sh
+
+# Real kernel networking without root: two network namespaces + veth + netem (needs iproute2, unprivileged userns)
+e2e-netns:
+	PYTHON=$(CURDIR)/.venv/bin/python scripts/netns_e2e.sh
 
 # --- simulation and loopback experiments: run anywhere, no root --------------------------
 sim: sim-phase1 sim-phase2 sim-phase3

@@ -10,8 +10,9 @@ come from where, because not everything could be run in the same environment.
 |---|---|---|
 | Unit tests | development machine | 93 tests across all phases (`make test`) |
 | Simulation, theory | development machine | routing (Phase 1), detection codes, ARQ, TCP congestion control, analyzer validation |
+| Real kernel network, no Mininet | development machine, network namespaces + veth + `tc netem` (`make e2e-netns`) | the ARQ and DNS command-line tools as separate processes across a link with 20 ms RTT and 5% loss: Stop-and-Wait, Go-Back-N and Selective Repeat each delivered 60/60 frames (efficiency 0.09 / 0.43 / 0.69); a DNS lookup resolved across the link |
 | Real sockets, one machine | development machine, loopback | ARQ over real UDP; DNS hierarchy over real UDP (server replies delayed to stand in for distance) |
-| Real Linux networking | **not run yet** | Mininet + FRR (RIP/OSPF experiments), ARQ with netem, DNS on separate hosts with tcpdump, Linux Reno/CUBIC/BBR with iperf3 + `ss -ti` |
+| Real Linux networking with Mininet | **not run yet** | Mininet + FRR (RIP/OSPF experiments), the Mininet experiment scripts themselves, DNS with tcpdump, Linux Reno/CUBIC/BBR with iperf3 + `ss -ti` |
 
 The testbed experiments are written, share their logic with tested code, and are wired into `make testbed`, but they
 need root, Mininet, FRR and iperf3 on the Ubuntu VM (`docs/SETUP.md`), which the development machine did not
