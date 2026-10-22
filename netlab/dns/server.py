@@ -17,7 +17,6 @@ import time
 from typing import Callable
 
 from netlab.dns import message as m
-from netlab.dns.zone import AuthoritativeServer
 
 
 class UdpServer(threading.Thread):
@@ -89,7 +88,7 @@ def main() -> None:
     res.add_argument("--weak", action="store_true", help="sequential IDs + fixed source port (vulnerable)")
     res.add_argument("--upstream-port", type=int, default=53)
     for p in (auth, res):
-        p.add_argument("--bind", default="0.0.0.0")
+        p.add_argument("--bind", default="127.0.0.1", help="address to listen on (pass the host's own IP on the testbed)")
         p.add_argument("--port", type=int, default=53)
         p.add_argument("--delay-ms", type=float, default=0.0)
     args = parser.parse_args()

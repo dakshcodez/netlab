@@ -1,4 +1,4 @@
-.PHONY: test sim sim-phase1 sim-phase2 sim-phase3 loopback testbed testbed-phase1 testbed-phase2 testbed-phase3 dashboard all clean
+.PHONY: test sim sim-phase1 sim-phase2 sim-phase3 testbed testbed-phase1 testbed-phase2 testbed-phase3 dashboard all clean
 
 PY_ROOT = sudo PYTHONPATH=. python3
 

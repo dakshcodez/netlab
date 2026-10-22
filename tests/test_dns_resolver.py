@@ -2,8 +2,7 @@ import pytest
 
 from netlab.dns import message as m
 from netlab.dns.hierarchy import Addresses, WWW_IP, build_servers
-from netlab.dns.resolver import Resolver, SequentialTxid
-from netlab.dns.zone import AuthoritativeServer
+from netlab.dns.resolver import Resolver
 
 ROOT, TLD, EX = "10.0.0.1", "10.0.0.2", "10.0.0.3"
 

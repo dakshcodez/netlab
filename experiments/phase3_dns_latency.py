@@ -89,7 +89,7 @@ def loopback(args) -> tuple[Result, float]:
 
 
 def testbed(args) -> tuple[Result, float]:
-    from netlab.testbed.net import Testbed, _json_in
+    from netlab.testbed.net import Testbed
     from netlab.topology import library
 
     topo = library.dns_lab(args.link_delay_ms)

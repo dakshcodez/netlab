@@ -1,6 +1,6 @@
 import pytest
 
-from netlab.tcp.sim import MSS_BYTES, jain, simulate
+from netlab.tcp.sim import jain, simulate
 
 
 def goodput(res, i=0):

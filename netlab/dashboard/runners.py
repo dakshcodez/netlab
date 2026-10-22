@@ -9,7 +9,6 @@ import importlib.util
 import os
 import random
 import subprocess
-import sys
 from pathlib import Path
 
 from netlab.common.results import RESULTS_DIR, list_results, load

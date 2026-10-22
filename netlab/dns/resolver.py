@@ -14,7 +14,6 @@ Behaviour that the experiments depend on:
 
 from __future__ import annotations
 
-import random
 import secrets
 import select
 import socket

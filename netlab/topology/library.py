@@ -75,7 +75,7 @@ def get(name: str) -> Topology:
     try:
         return TOPOLOGIES[name]()
     except KeyError:
-        raise SystemExit(f"unknown topology {name!r}; choose from {', '.join(TOPOLOGIES)}")
+        raise SystemExit(f"unknown topology {name!r}; choose from {', '.join(TOPOLOGIES)}") from None
 
 
 # Small abstract graphs for the distance-vector count-to-infinity demos (simulation only).

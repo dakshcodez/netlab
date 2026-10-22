@@ -13,7 +13,6 @@ the measured Reno cwnd, deliverable 3.7):
 from __future__ import annotations
 
 import argparse
-import itertools
 import json
 import os
 import re

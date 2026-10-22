@@ -146,13 +146,12 @@ def exp_reorder(real: bool, n: int) -> Result:
     probs = [0.0, 0.02, 0.05, 0.1, 0.2, 0.3]
     _, _, _ = standard_setup(A, FRAME)
     tx_time = FRAME * 8 / 1e6
-    series, discards = [], []
+    series = []
     for proto in ("gbn", "sr"):
-        eff, disc = [], []
+        eff = []
         for q in probs:
             e, retx, d = sim_eff(proto, window, 0.0, n, reorder=q, reorder_delay=3 * tx_time)
             eff.append(e)
-            disc.append(d)
             result.add(protocol=proto, reorder_prob=q, level="sim", efficiency=e,
                        retransmissions_per_packet=retx, out_of_order_discards_per_packet=d)
         series.append({"x": probs, "y": eff, "label": LABELS[proto], "color": COLORS[proto]})
