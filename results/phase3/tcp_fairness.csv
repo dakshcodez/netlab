@@ -1,0 +1,7 @@
+flow_a,flow_b,mbps_a,mbps_b,jain_index
+reno,reno,5.0,5.0,1.0
+cubic,cubic,3.52,6.46,0.92
+bbr,bbr,5.62,4.38,0.985
+cubic,reno,7.83,2.16,0.757
+bbr,cubic,0.41,9.59,0.543
+bbr,reno,0.53,9.47,0.556

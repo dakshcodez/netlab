@@ -1,0 +1,279 @@
+{
+  "phase": "phase2",
+  "experiment": "arq_window",
+  "params": {
+    "a": 5.0,
+    "loss": 0.05,
+    "packets": 3000
+  },
+  "rows": [
+    {
+      "protocol": "gbn",
+      "window": 1,
+      "level": "sim",
+      "efficiency": 0.0861448278884036
+    },
+    {
+      "protocol": "gbn",
+      "window": 1,
+      "level": "theory",
+      "efficiency": 0.08636363636363636
+    },
+    {
+      "protocol": "gbn",
+      "window": 2,
+      "level": "sim",
+      "efficiency": 0.16697414610331857
+    },
+    {
+      "protocol": "gbn",
+      "window": 2,
+      "level": "theory",
+      "efficiency": 0.16450216450216448
+    },
+    {
+      "protocol": "gbn",
+      "window": 4,
+      "level": "sim",
+      "efficiency": 0.3108401927358223
+    },
+    {
+      "protocol": "gbn",
+      "window": 4,
+      "level": "theory",
+      "efficiency": 0.3003952569169961
+    },
+    {
+      "protocol": "gbn",
+      "window": 8,
+      "level": "sim",
+      "efficiency": 0.5297092152140814
+    },
+    {
+      "protocol": "gbn",
+      "window": 8,
+      "level": "theory",
+      "efficiency": 0.5117845117845117
+    },
+    {
+      "protocol": "gbn",
+      "window": 11,
+      "level": "sim",
+      "efficiency": 0.633129447319634
+    },
+    {
+      "protocol": "gbn",
+      "window": 11,
+      "level": "theory",
+      "efficiency": 0.6333333333333333
+    },
+    {
+      "protocol": "gbn",
+      "window": 16,
+      "level": "sim",
+      "efficiency": 0.5430609230453017
+    },
+    {
+      "protocol": "gbn",
+      "window": 16,
+      "level": "theory",
+      "efficiency": 0.6333333333333333
+    },
+    {
+      "protocol": "gbn",
+      "window": 24,
+      "level": "sim",
+      "efficiency": 0.4378515591920588
+    },
+    {
+      "protocol": "gbn",
+      "window": 24,
+      "level": "theory",
+      "efficiency": 0.6333333333333333
+    },
+    {
+      "protocol": "gbn",
+      "window": 32,
+      "level": "sim",
+      "efficiency": 0.3763575567451601
+    },
+    {
+      "protocol": "gbn",
+      "window": 32,
+      "level": "theory",
+      "efficiency": 0.6333333333333333
+    },
+    {
+      "protocol": "gbn",
+      "window": 48,
+      "level": "sim",
+      "efficiency": 0.2784581906472569
+    },
+    {
+      "protocol": "gbn",
+      "window": 48,
+      "level": "theory",
+      "efficiency": 0.6333333333333333
+    },
+    {
+      "protocol": "gbn",
+      "window": 2,
+      "level": "real",
+      "efficiency": 0.17476985209441342
+    },
+    {
+      "protocol": "gbn",
+      "window": 8,
+      "level": "real",
+      "efficiency": 0.5604363995012848
+    },
+    {
+      "protocol": "gbn",
+      "window": 16,
+      "level": "real",
+      "efficiency": 0.4945104980987304
+    },
+    {
+      "protocol": "gbn",
+      "window": 32,
+      "level": "real",
+      "efficiency": 0.453180605408796
+    },
+    {
+      "protocol": "sr",
+      "window": 1,
+      "level": "sim",
+      "efficiency": 0.0861448278884036
+    },
+    {
+      "protocol": "sr",
+      "window": 1,
+      "level": "theory",
+      "efficiency": 0.08636363636363636
+    },
+    {
+      "protocol": "sr",
+      "window": 2,
+      "level": "sim",
+      "efficiency": 0.16662413651885352
+    },
+    {
+      "protocol": "sr",
+      "window": 2,
+      "level": "theory",
+      "efficiency": 0.17272727272727273
+    },
+    {
+      "protocol": "sr",
+      "window": 4,
+      "level": "sim",
+      "efficiency": 0.3134638042322329
+    },
+    {
+      "protocol": "sr",
+      "window": 4,
+      "level": "theory",
+      "efficiency": 0.34545454545454546
+    },
+    {
+      "protocol": "sr",
+      "window": 8,
+      "level": "sim",
+      "efficiency": 0.5578544551783896
+    },
+    {
+      "protocol": "sr",
+      "window": 8,
+      "level": "theory",
+      "efficiency": 0.6909090909090909
+    },
+    {
+      "protocol": "sr",
+      "window": 11,
+      "level": "sim",
+      "efficiency": 0.7074202273113286
+    },
+    {
+      "protocol": "sr",
+      "window": 11,
+      "level": "theory",
+      "efficiency": 0.95
+    },
+    {
+      "protocol": "sr",
+      "window": 16,
+      "level": "sim",
+      "efficiency": 0.739844012368874
+    },
+    {
+      "protocol": "sr",
+      "window": 16,
+      "level": "theory",
+      "efficiency": 0.95
+    },
+    {
+      "protocol": "sr",
+      "window": 24,
+      "level": "sim",
+      "efficiency": 0.7783395587689844
+    },
+    {
+      "protocol": "sr",
+      "window": 24,
+      "level": "theory",
+      "efficiency": 0.95
+    },
+    {
+      "protocol": "sr",
+      "window": 32,
+      "level": "sim",
+      "efficiency": 0.8030154637553183
+    },
+    {
+      "protocol": "sr",
+      "window": 32,
+      "level": "theory",
+      "efficiency": 0.95
+    },
+    {
+      "protocol": "sr",
+      "window": 48,
+      "level": "sim",
+      "efficiency": 0.8353719450534925
+    },
+    {
+      "protocol": "sr",
+      "window": 48,
+      "level": "theory",
+      "efficiency": 0.95
+    },
+    {
+      "protocol": "sr",
+      "window": 2,
+      "level": "real",
+      "efficiency": 0.17712295718795715
+    },
+    {
+      "protocol": "sr",
+      "window": 8,
+      "level": "real",
+      "efficiency": 0.5823378275757811
+    },
+    {
+      "protocol": "sr",
+      "window": 16,
+      "level": "real",
+      "efficiency": 0.7830453722691512
+    },
+    {
+      "protocol": "sr",
+      "window": 32,
+      "level": "real",
+      "efficiency": 0.8223468170079141
+    }
+  ],
+  "summary": {},
+  "level": "sim",
+  "created": "2026-10-29T18:03:10+00:00",
+  "host": "omarchy"
+}

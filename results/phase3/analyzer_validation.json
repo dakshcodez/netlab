@@ -1,0 +1,45 @@
+{
+  "phase": "phase3",
+  "experiment": "analyzer_validation",
+  "params": {
+    "bandwidth_mbps": 10,
+    "rtt_ms": 40,
+    "buffer_pkts": 34
+  },
+  "rows": [
+    {
+      "cc": "reno",
+      "sim_retransmissions": 78,
+      "analyzer_retransmissions": 78,
+      "sim_rtt_median_ms": 61.4,
+      "analyzer_rtt_median_ms": 62.553,
+      "sim_mbps": 9.93,
+      "analyzer_mbps": 9.9423,
+      "analyzer_syn_to_synack_ms": 40.0
+    },
+    {
+      "cc": "cubic",
+      "sim_retransmissions": 166,
+      "analyzer_retransmissions": 166,
+      "sim_rtt_median_ms": 72.98,
+      "analyzer_rtt_median_ms": 74.137,
+      "sim_mbps": 9.41,
+      "analyzer_mbps": 9.4335,
+      "analyzer_syn_to_synack_ms": 40.0
+    },
+    {
+      "cc": "bbr",
+      "sim_retransmissions": 68,
+      "analyzer_retransmissions": 68,
+      "sim_rtt_median_ms": 41.16,
+      "analyzer_rtt_median_ms": 41.159,
+      "sim_mbps": 9.94,
+      "analyzer_mbps": 9.9441,
+      "analyzer_syn_to_synack_ms": 40.0
+    }
+  ],
+  "summary": {},
+  "level": "sim",
+  "created": "2026-10-29T18:04:11+00:00",
+  "host": "omarchy"
+}

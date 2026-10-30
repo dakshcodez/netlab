@@ -47,6 +47,27 @@ def arq_vs_loss(protocols: list[str], a: float, window: int, losses: list[float]
     return out
 
 
+def sr_window_compare(a: float, losses: list[float], packets: int = 1500, runs: int = 5) -> list[dict]:
+    """Selective Repeat with the textbook window (1+2a) vs the RTT-aware window 2(1+2a): mean and SD."""
+    from statistics import mean, stdev
+
+    _, delay, timeout = standard_setup(a, FRAME)
+    base_w, new_w = int(1 + 2 * a), theory.recommended_sr_window(a)
+    rows = []
+    for p in losses:
+        res = {}
+        for name, w in (("baseline", base_w), ("proposed", new_w)):
+            effs = [arq_simulate("sr", packets, w, timeout, Channel(delay=delay, loss=p, rate_bps=1e6, seed=s),
+                                 Channel(delay=delay, seed=1000 + s), PAYLOAD).efficiency
+                    for s in range(1, runs + 1)]
+            res[name] = (mean(effs), stdev(effs) if runs > 1 else 0.0)
+        rows.append({"loss": p, "baseline_window": base_w, "proposed_window": new_w,
+                     "baseline_mean": res["baseline"][0], "baseline_sd": res["baseline"][1],
+                     "proposed_mean": res["proposed"][0], "proposed_sd": res["proposed"][1],
+                     "improvement_pct": (res["proposed"][0] / res["baseline"][0] - 1) * 100})
+    return rows
+
+
 # --- error detection ------------------------------------------------------------------
 
 def detection_vs_burst(lengths: list[int], trials: int = 3000, seed: int = 1) -> dict[str, list[float]]:

@@ -37,3 +37,16 @@ def efficiency(protocol: str, a: float, p: float, n: int) -> float:
     if protocol == "sr":
         return eff_selective_repeat(a, p, n)
     raise ValueError(protocol)
+
+
+def recommended_sr_window(a: float) -> int:
+    """RTT-aware Selective Repeat window: 2(1+2a) frames, rounded up.
+
+    The textbook minimum is ``1 + 2a`` (one round trip of frames). That is too small once frames
+    are lost: the window cannot slide until a retransmission is acknowledged, which happens a
+    timeout plus a round trip after the first copy, so about two round trips of frames must be
+    outstanding for the link to stay busy.
+    """
+    import math
+
+    return math.ceil(2 * (1 + 2 * a))

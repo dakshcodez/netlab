@@ -1,0 +1,38 @@
+{
+  "phase": "phase1",
+  "experiment": "count_to_infinity_line",
+  "params": {
+    "graph": "line",
+    "fail": [
+      "B",
+      "C"
+    ],
+    "dest": "C",
+    "infinity": 16,
+    "observer": "A"
+  },
+  "rows": [
+    {
+      "mode": "plain",
+      "rounds_to_converge": 15,
+      "final_cost": 16,
+      "peak_cost": 16
+    },
+    {
+      "mode": "split horizon",
+      "rounds_to_converge": 2,
+      "final_cost": 16,
+      "peak_cost": 16
+    },
+    {
+      "mode": "poison reverse",
+      "rounds_to_converge": 2,
+      "final_cost": 16,
+      "peak_cost": 16
+    }
+  ],
+  "summary": {},
+  "level": "sim",
+  "created": "2026-10-29T18:01:55+00:00",
+  "host": "omarchy"
+}

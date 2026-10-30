@@ -1,0 +1,59 @@
+{
+  "phase": "phase3",
+  "experiment": "tcp_fairness",
+  "params": {
+    "bandwidth_mbps": 10.0,
+    "rtt_ms": 40.0,
+    "buffer_pkts": 68,
+    "duration_s": 60,
+    "measured_after_s": 10
+  },
+  "rows": [
+    {
+      "flow_a": "reno",
+      "flow_b": "reno",
+      "mbps_a": 5.0,
+      "mbps_b": 5.0,
+      "jain_index": 1.0
+    },
+    {
+      "flow_a": "cubic",
+      "flow_b": "cubic",
+      "mbps_a": 3.52,
+      "mbps_b": 6.46,
+      "jain_index": 0.92
+    },
+    {
+      "flow_a": "bbr",
+      "flow_b": "bbr",
+      "mbps_a": 5.62,
+      "mbps_b": 4.38,
+      "jain_index": 0.985
+    },
+    {
+      "flow_a": "cubic",
+      "flow_b": "reno",
+      "mbps_a": 7.83,
+      "mbps_b": 2.16,
+      "jain_index": 0.757
+    },
+    {
+      "flow_a": "bbr",
+      "flow_b": "cubic",
+      "mbps_a": 0.41,
+      "mbps_b": 9.59,
+      "jain_index": 0.543
+    },
+    {
+      "flow_a": "bbr",
+      "flow_b": "reno",
+      "mbps_a": 0.53,
+      "mbps_b": 9.47,
+      "jain_index": 0.556
+    }
+  ],
+  "summary": {},
+  "level": "sim",
+  "created": "2026-10-29T18:03:53+00:00",
+  "host": "omarchy"
+}

@@ -20,10 +20,36 @@ from netlab.dashboard import runners as run
 st.set_page_config(page_title="NetLab", layout="wide")
 st.title("NetLab: Network Performance Analyzer & Simulator")
 
-PAGES = ["ARQ: efficiency vs loss", "TCP congestion control", "DNS cold vs cached",
+PAGES = ["SR window: baseline vs proposed", "ARQ: efficiency vs loss", "TCP congestion control", "DNS cold vs cached",
          "Error detection strength", "Testbed experiments", "Browse saved results"]
 page = st.sidebar.radio("Experiment", PAGES)
 st.sidebar.caption("Theory, simulation and real networking, on the same axes.")
+
+
+def sr_window_page() -> None:
+    st.subheader("Selective Repeat: textbook window vs RTT-aware window")
+    st.caption("Baseline window = 1+2a (one round trip of frames). Proposed = 2(1+2a), which covers the "
+               "extra round trip a lost frame blocks the window for.")
+    c1, c2, c3 = st.columns(3)
+    a = c1.slider("a = propagation delay / frame time", 0.5, 20.0, 5.0, 0.5, key="srw_a")
+    max_loss = c2.slider("max loss probability", 0.02, 0.4, 0.2, 0.02, key="srw_l")
+    runs = c3.slider("repeated runs per point", 2, 10, 5, key="srw_r")
+    if st.button("Run", key="srw"):
+        losses = [round(max_loss * i / 4, 4) for i in range(1, 5)]
+        with st.spinner("simulating..."):
+            rows = run.sr_window_compare(a, losses, packets=1200, runs=runs)
+        fig, ax = plt.subplots(figsize=(8, 4))
+        ax.errorbar(losses, [r["baseline_mean"] for r in rows], [r["baseline_sd"] for r in rows], fmt="-o",
+                    capsize=3, color="#9aa5b1", label=f"baseline, window {rows[0]['baseline_window']}")
+        ax.errorbar(losses, [r["proposed_mean"] for r in rows], [r["proposed_sd"] for r in rows], fmt="-o",
+                    capsize=3, color=COLORS["sr"], label=f"proposed, window {rows[0]['proposed_window']}")
+        ax.set_xlabel("frame loss probability")
+        ax.set_ylabel("link efficiency (mean ± SD)")
+        ax.set_ylim(0, 1.02)
+        ax.grid(alpha=0.3)
+        ax.legend(frameon=False)
+        st.pyplot(fig)
+        st.dataframe(pd.DataFrame(rows).round(4), hide_index=True)
 
 
 def arq_page() -> None:
@@ -145,6 +171,6 @@ def browse_page() -> None:
         st.json({"params": r.params, "summary": {k: v for k, v in r.summary.items() if not str(k).startswith("trace_")}})
 
 
-{"ARQ: efficiency vs loss": arq_page, "TCP congestion control": tcp_page, "DNS cold vs cached": dns_page,
+{"SR window: baseline vs proposed": sr_window_page, "ARQ: efficiency vs loss": arq_page, "TCP congestion control": tcp_page, "DNS cold vs cached": dns_page,
  "Error detection strength": detection_page, "Testbed experiments": testbed_page,
  "Browse saved results": browse_page}[page]()

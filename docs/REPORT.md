@@ -8,7 +8,7 @@ come from where, because not everything could be run in the same environment.
 
 | Level | Where it ran | Items |
 |---|---|---|
-| Unit tests | development machine | 93 tests across all phases (`make test`) |
+| Unit tests | development machine | 94 tests across all phases (`make test`) |
 | Simulation, theory | development machine | routing (Phase 1), detection codes, ARQ, TCP congestion control, analyzer validation |
 | Real kernel network, no Mininet | development machine, network namespaces + veth + `tc netem` (`make e2e-netns`) | the ARQ and DNS command-line tools as separate processes across a link with 20 ms RTT and 5% loss: Stop-and-Wait, Go-Back-N and Selective Repeat each delivered 60/60 frames (efficiency 0.09 / 0.43 / 0.69); a DNS lookup resolved across the link |
 | Real sockets, one machine | development machine, loopback | ARQ over real UDP; DNS hierarchy over real UDP (server replies delayed to stand in for distance) |
@@ -120,6 +120,20 @@ The TCP simulator's sender-side capture was written out as a real pcap file and 
 retransmission counts match the simulator's exactly (78, 166 and 68 for Reno, CUBIC and BBR), median RTT is within
 1.2 ms and throughput within 0.02 Mbit/s. It also decodes DNS (query/response latency matching, unanswered queries) and
 RIP/OSPF packet counts, covered by unit tests on hand-built frames. It has not yet seen a capture from the testbed.
+
+## Proposed mechanism: RTT-aware Selective Repeat window
+
+Selective Repeat with window `N = 1 + 2a` (textbook) against `N = 2(1 + 2a)` (proposed), a = 5, 10 seeds, mean ± SD
+(`experiments/phase2_sr_window.py`, `results/phase2/sr_window_*.json`):
+
+| Scenario | Sim baseline | Sim proposed | Gain | Real UDP baseline | Real UDP proposed | Gain |
+|---|---|---|---|---|---|---|
+| 1% loss | 0.909 ± 0.010 | 0.914 ± 0.008 | +0.6% | 0.871 ± 0.049 | 0.872 ± 0.049 | +0.1% |
+| 5% loss | 0.717 ± 0.016 | 0.776 ± 0.009 | +8.2% | 0.702 ± 0.062 | 0.754 ± 0.061 | +7.4% |
+| 20% loss | 0.478 ± 0.008 | 0.590 ± 0.005 | +23.5% | 0.443 ± 0.039 | 0.552 ± 0.048 | +24.6% |
+
+The gain grows with the round trip at 5% loss: +1.6% (a = 1), +8.2% (5), +12.5% (10), +18.9% (20). It does not reach the
+textbook `1 - p` (0.776 against 0.95 at 5% loss), gives nothing on clean links, and doubles the buffer.
 
 ## Limitations and open items
 

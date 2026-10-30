@@ -1,0 +1,51 @@
+repeat,step,rtt_ms,rcode,note
+0,cold: www.example.lab,64.7973169980105,0,walks root → TLD → authoritative (3 upstream queries)
+0,warm: www.example.lab again,2.5385360058862716,0,answer cached
+0,sibling: mail.example.lab,23.12958100810647,0,delegations cached → only the authoritative server
+0,NXDOMAIN: ghost.example.lab,23.198908995254897,3,"one upstream query, result negatively cached"
+0,NXDOMAIN again,2.501540002413094,3,negative cache hit
+1,cold: www.example.lab,64.53108899586368,0,walks root → TLD → authoritative (3 upstream queries)
+1,warm: www.example.lab again,2.5154449976980686,0,answer cached
+1,sibling: mail.example.lab,23.15434199408628,0,delegations cached → only the authoritative server
+1,NXDOMAIN: ghost.example.lab,23.020795997581445,3,"one upstream query, result negatively cached"
+1,NXDOMAIN again,2.464304998284206,3,negative cache hit
+2,cold: www.example.lab,64.65871899854392,0,walks root → TLD → authoritative (3 upstream queries)
+2,warm: www.example.lab again,2.470285995514132,0,answer cached
+2,sibling: mail.example.lab,23.204886994790286,0,delegations cached → only the authoritative server
+2,NXDOMAIN: ghost.example.lab,23.110718000680208,3,"one upstream query, result negatively cached"
+2,NXDOMAIN again,2.414458998828195,3,negative cache hit
+3,cold: www.example.lab,64.61471899820026,0,walks root → TLD → authoritative (3 upstream queries)
+3,warm: www.example.lab again,2.54241400398314,0,answer cached
+3,sibling: mail.example.lab,23.05082799284719,0,delegations cached → only the authoritative server
+3,NXDOMAIN: ghost.example.lab,23.189391009509563,3,"one upstream query, result negatively cached"
+3,NXDOMAIN again,2.417715993942693,3,negative cache hit
+4,cold: www.example.lab,64.46203199448064,0,walks root → TLD → authoritative (3 upstream queries)
+4,warm: www.example.lab again,2.4835100048221648,0,answer cached
+4,sibling: mail.example.lab,23.085756998625584,0,delegations cached → only the authoritative server
+4,NXDOMAIN: ghost.example.lab,23.27008701104205,3,"one upstream query, result negatively cached"
+4,NXDOMAIN again,2.4081939918687567,3,negative cache hit
+5,cold: www.example.lab,64.38873300794512,0,walks root → TLD → authoritative (3 upstream queries)
+5,warm: www.example.lab again,2.5597589992685243,0,answer cached
+5,sibling: mail.example.lab,23.035007005091757,0,delegations cached → only the authoritative server
+5,NXDOMAIN: ghost.example.lab,23.20528498967178,3,"one upstream query, result negatively cached"
+5,NXDOMAIN again,2.390191992162727,3,negative cache hit
+6,cold: www.example.lab,64.42239000170957,0,walks root → TLD → authoritative (3 upstream queries)
+6,warm: www.example.lab again,2.3946790024638176,0,answer cached
+6,sibling: mail.example.lab,22.90046599227935,0,delegations cached → only the authoritative server
+6,NXDOMAIN: ghost.example.lab,23.059254002873786,3,"one upstream query, result negatively cached"
+6,NXDOMAIN again,2.435294009046629,3,negative cache hit
+7,cold: www.example.lab,64.50658300309442,0,walks root → TLD → authoritative (3 upstream queries)
+7,warm: www.example.lab again,2.526593001675792,0,answer cached
+7,sibling: mail.example.lab,23.094952004612423,0,delegations cached → only the authoritative server
+7,NXDOMAIN: ghost.example.lab,23.105739994207397,3,"one upstream query, result negatively cached"
+7,NXDOMAIN again,2.3751650005578995,3,negative cache hit
+8,cold: www.example.lab,64.47391599067487,0,walks root → TLD → authoritative (3 upstream queries)
+8,warm: www.example.lab again,2.477503992849961,0,answer cached
+8,sibling: mail.example.lab,23.27256200078409,0,delegations cached → only the authoritative server
+8,NXDOMAIN: ghost.example.lab,23.178671995992772,3,"one upstream query, result negatively cached"
+8,NXDOMAIN again,2.3949239985086024,3,negative cache hit
+9,cold: www.example.lab,64.6864239970455,0,walks root → TLD → authoritative (3 upstream queries)
+9,warm: www.example.lab again,2.431996996165253,0,answer cached
+9,sibling: mail.example.lab,23.1709710060386,0,delegations cached → only the authoritative server
+9,NXDOMAIN: ghost.example.lab,23.58228999946732,3,"one upstream query, result negatively cached"
+9,NXDOMAIN again,2.496635992429219,3,negative cache hit

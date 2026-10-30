@@ -1,0 +1,4 @@
+mode,rounds_to_converge,final_cost,peak_cost
+plain,15,16,16
+split horizon,2,16,16
+poison reverse,2,16,16

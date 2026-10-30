@@ -1,0 +1,185 @@
+{
+  "phase": "phase2",
+  "experiment": "arq_timeout",
+  "params": {
+    "a": 5.0,
+    "loss": 0.05,
+    "window": 16,
+    "packets": 3000,
+    "note": "timeout factor 1.0 = exactly one ACK round trip"
+  },
+  "rows": [
+    {
+      "protocol": "gbn",
+      "timeout_factor": 0.25,
+      "efficiency": 0.399732319731001,
+      "retransmissions_per_packet": 1.5017777777777777
+    },
+    {
+      "protocol": "gbn",
+      "timeout_factor": 0.5,
+      "efficiency": 0.399732319731001,
+      "retransmissions_per_packet": 1.5015555555555558
+    },
+    {
+      "protocol": "gbn",
+      "timeout_factor": 0.75,
+      "efficiency": 0.39972375641571584,
+      "retransmissions_per_packet": 1.5015555555555558
+    },
+    {
+      "protocol": "gbn",
+      "timeout_factor": 0.9,
+      "efficiency": 0.3996980732335753,
+      "retransmissions_per_packet": 1.5015555555555558
+    },
+    {
+      "protocol": "gbn",
+      "timeout_factor": 1.0,
+      "efficiency": 0.5430609230453017,
+      "retransmissions_per_packet": 0.8384444444444445
+    },
+    {
+      "protocol": "gbn",
+      "timeout_factor": 1.25,
+      "efficiency": 0.542845754569387,
+      "retransmissions_per_packet": 0.8384444444444445
+    },
+    {
+      "protocol": "gbn",
+      "timeout_factor": 1.5,
+      "efficiency": 0.5426001060049488,
+      "retransmissions_per_packet": 0.8384444444444445
+    },
+    {
+      "protocol": "gbn",
+      "timeout_factor": 2,
+      "efficiency": 0.475031315477951,
+      "retransmissions_per_packet": 0.8384444444444445
+    },
+    {
+      "protocol": "gbn",
+      "timeout_factor": 3,
+      "efficiency": 0.38033144312539413,
+      "retransmissions_per_packet": 0.8384444444444445
+    },
+    {
+      "protocol": "gbn",
+      "timeout_factor": 4,
+      "efficiency": 0.3171236210496202,
+      "retransmissions_per_packet": 0.8384444444444445
+    },
+    {
+      "protocol": "gbn",
+      "timeout_factor": 0.5,
+      "level": "real",
+      "efficiency": 0.39127751040473663
+    },
+    {
+      "protocol": "gbn",
+      "timeout_factor": 1.0,
+      "level": "real",
+      "efficiency": 0.49451198862016865
+    },
+    {
+      "protocol": "gbn",
+      "timeout_factor": 2.0,
+      "level": "real",
+      "efficiency": 0.4240488636858802
+    },
+    {
+      "protocol": "gbn",
+      "timeout_factor": 4.0,
+      "level": "real",
+      "efficiency": 0.28085294171723124
+    },
+    {
+      "protocol": "sr",
+      "timeout_factor": 0.25,
+      "efficiency": 0.4859487489131936,
+      "retransmissions_per_packet": 1.054
+    },
+    {
+      "protocol": "sr",
+      "timeout_factor": 0.5,
+      "efficiency": 0.4854985162697743,
+      "retransmissions_per_packet": 1.0518888888888889
+    },
+    {
+      "protocol": "sr",
+      "timeout_factor": 0.75,
+      "efficiency": 0.4844189762825151,
+      "retransmissions_per_packet": 1.0526666666666666
+    },
+    {
+      "protocol": "sr",
+      "timeout_factor": 0.9,
+      "efficiency": 0.4824194741203193,
+      "retransmissions_per_packet": 1.053111111111111
+    },
+    {
+      "protocol": "sr",
+      "timeout_factor": 1.0,
+      "efficiency": 0.739844012368874,
+      "retransmissions_per_packet": 0.05533333333333333
+    },
+    {
+      "protocol": "sr",
+      "timeout_factor": 1.25,
+      "efficiency": 0.7325214516578707,
+      "retransmissions_per_packet": 0.05533333333333333
+    },
+    {
+      "protocol": "sr",
+      "timeout_factor": 1.5,
+      "efficiency": 0.7110219889846577,
+      "retransmissions_per_packet": 0.05533333333333333
+    },
+    {
+      "protocol": "sr",
+      "timeout_factor": 2,
+      "efficiency": 0.6395044903675711,
+      "retransmissions_per_packet": 0.05533333333333333
+    },
+    {
+      "protocol": "sr",
+      "timeout_factor": 3,
+      "efficiency": 0.5339707524962848,
+      "retransmissions_per_packet": 0.05533333333333333
+    },
+    {
+      "protocol": "sr",
+      "timeout_factor": 4,
+      "efficiency": 0.45663915086122964,
+      "retransmissions_per_packet": 0.05533333333333333
+    },
+    {
+      "protocol": "sr",
+      "timeout_factor": 0.5,
+      "level": "real",
+      "efficiency": 0.4932589138068838
+    },
+    {
+      "protocol": "sr",
+      "timeout_factor": 1.0,
+      "level": "real",
+      "efficiency": 0.783170047741725
+    },
+    {
+      "protocol": "sr",
+      "timeout_factor": 2.0,
+      "level": "real",
+      "efficiency": 0.6902918989283061
+    },
+    {
+      "protocol": "sr",
+      "timeout_factor": 4.0,
+      "level": "real",
+      "efficiency": 0.5041158569968848
+    }
+  ],
+  "summary": {},
+  "level": "sim",
+  "created": "2026-10-29T18:03:23+00:00",
+  "host": "omarchy"
+}

@@ -42,3 +42,9 @@ def test_app_renders_every_page():
         at.run()
         at.sidebar.radio[0].set_value(page).run()
         assert not at.exception, (page, at.exception)
+
+
+def test_sr_window_proposed_beats_baseline_under_loss():
+    rows = runners.sr_window_compare(a=5, losses=[0.1], packets=600, runs=3)
+    assert rows[0]["proposed_window"] == 22 and rows[0]["baseline_window"] == 11
+    assert rows[0]["proposed_mean"] > rows[0]["baseline_mean"]

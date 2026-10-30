@@ -1,0 +1,494 @@
+{
+  "phase": "phase2",
+  "experiment": "detection",
+  "params": {
+    "message_bytes": 64,
+    "trials": 20000,
+    "seed": 1
+  },
+  "rows": [
+    {
+      "kind": "burst",
+      "burst_bits": 1,
+      "scheme": "parity",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 1,
+      "scheme": "2d-parity",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 1,
+      "scheme": "checksum",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 1,
+      "scheme": "crc32",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 2,
+      "scheme": "parity",
+      "undetected_rate": 0.986
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 2,
+      "scheme": "2d-parity",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 2,
+      "scheme": "checksum",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 2,
+      "scheme": "crc32",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 3,
+      "scheme": "parity",
+      "undetected_rate": 0.48905
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 3,
+      "scheme": "2d-parity",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 3,
+      "scheme": "checksum",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 3,
+      "scheme": "crc32",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 4,
+      "scheme": "parity",
+      "undetected_rate": 0.49345
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 4,
+      "scheme": "2d-parity",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 4,
+      "scheme": "checksum",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 4,
+      "scheme": "crc32",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 5,
+      "scheme": "parity",
+      "undetected_rate": 0.4901
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 5,
+      "scheme": "2d-parity",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 5,
+      "scheme": "checksum",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 5,
+      "scheme": "crc32",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 8,
+      "scheme": "parity",
+      "undetected_rate": 0.49355
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 8,
+      "scheme": "2d-parity",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 8,
+      "scheme": "checksum",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 8,
+      "scheme": "crc32",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 12,
+      "scheme": "parity",
+      "undetected_rate": 0.4895
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 12,
+      "scheme": "2d-parity",
+      "undetected_rate": 0.0009
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 12,
+      "scheme": "checksum",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 12,
+      "scheme": "crc32",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 16,
+      "scheme": "parity",
+      "undetected_rate": 0.4984
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 16,
+      "scheme": "2d-parity",
+      "undetected_rate": 0.00085
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 16,
+      "scheme": "checksum",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 16,
+      "scheme": "crc32",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 24,
+      "scheme": "parity",
+      "undetected_rate": 0.49255
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 24,
+      "scheme": "2d-parity",
+      "undetected_rate": 0.00045
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 24,
+      "scheme": "checksum",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 24,
+      "scheme": "crc32",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 32,
+      "scheme": "parity",
+      "undetected_rate": 0.4929
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 32,
+      "scheme": "2d-parity",
+      "undetected_rate": 0.00015
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 32,
+      "scheme": "checksum",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 32,
+      "scheme": "crc32",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 33,
+      "scheme": "parity",
+      "undetected_rate": 0.4946
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 33,
+      "scheme": "2d-parity",
+      "undetected_rate": 0.00025
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 33,
+      "scheme": "checksum",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 33,
+      "scheme": "crc32",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 40,
+      "scheme": "parity",
+      "undetected_rate": 0.4921
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 40,
+      "scheme": "2d-parity",
+      "undetected_rate": 0.0001
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 40,
+      "scheme": "checksum",
+      "undetected_rate": 5e-05
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 40,
+      "scheme": "crc32",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 48,
+      "scheme": "parity",
+      "undetected_rate": 0.48435
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 48,
+      "scheme": "2d-parity",
+      "undetected_rate": 0.0001
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 48,
+      "scheme": "checksum",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 48,
+      "scheme": "crc32",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 64,
+      "scheme": "parity",
+      "undetected_rate": 0.49015
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 64,
+      "scheme": "2d-parity",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 64,
+      "scheme": "checksum",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "burst",
+      "burst_bits": 64,
+      "scheme": "crc32",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "random",
+      "ber": 0.001,
+      "scheme": "parity",
+      "undetected_rate": 0.08
+    },
+    {
+      "kind": "random",
+      "ber": 0.001,
+      "scheme": "2d-parity",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "random",
+      "ber": 0.001,
+      "scheme": "checksum",
+      "undetected_rate": 0.0024
+    },
+    {
+      "kind": "random",
+      "ber": 0.001,
+      "scheme": "crc32",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "random",
+      "ber": 0.01,
+      "scheme": "parity",
+      "undetected_rate": 0.4579
+    },
+    {
+      "kind": "random",
+      "ber": 0.01,
+      "scheme": "2d-parity",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "random",
+      "ber": 0.01,
+      "scheme": "checksum",
+      "undetected_rate": 0.00305
+    },
+    {
+      "kind": "random",
+      "ber": 0.01,
+      "scheme": "crc32",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "random",
+      "ber": 0.05,
+      "scheme": "parity",
+      "undetected_rate": 0.34725
+    },
+    {
+      "kind": "random",
+      "ber": 0.05,
+      "scheme": "2d-parity",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "random",
+      "ber": 0.05,
+      "scheme": "checksum",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "random",
+      "ber": 0.05,
+      "scheme": "crc32",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "adversarial",
+      "edit": "swap two words",
+      "scheme": "parity",
+      "undetected_rate": 1.0
+    },
+    {
+      "kind": "adversarial",
+      "edit": "swap two words",
+      "scheme": "2d-parity",
+      "undetected_rate": 0.237
+    },
+    {
+      "kind": "adversarial",
+      "edit": "swap two words",
+      "scheme": "checksum",
+      "undetected_rate": 1.0
+    },
+    {
+      "kind": "adversarial",
+      "edit": "swap two words",
+      "scheme": "crc32",
+      "undetected_rate": 0.0
+    },
+    {
+      "kind": "adversarial",
+      "edit": "add/subtract between words",
+      "scheme": "parity",
+      "undetected_rate": 0.534
+    },
+    {
+      "kind": "adversarial",
+      "edit": "add/subtract between words",
+      "scheme": "2d-parity",
+      "undetected_rate": 0.0655
+    },
+    {
+      "kind": "adversarial",
+      "edit": "add/subtract between words",
+      "scheme": "checksum",
+      "undetected_rate": 1.0
+    },
+    {
+      "kind": "adversarial",
+      "edit": "add/subtract between words",
+      "scheme": "crc32",
+      "undetected_rate": 0.0
+    }
+  ],
+  "summary": {
+    "hamming74": [
+      {
+        "bit_errors": 0,
+        "decoded_correctly": 1.0,
+        "decoded_wrong": 0.0
+      },
+      {
+        "bit_errors": 1,
+        "decoded_correctly": 1.0,
+        "decoded_wrong": 0.0
+      },
+      {
+        "bit_errors": 2,
+        "decoded_correctly": 0.0,
+        "decoded_wrong": 1.0
+      },
+      {
+        "bit_errors": 3,
+        "decoded_correctly": 0.0,
+        "decoded_wrong": 1.0
+      }
+    ]
+  },
+  "level": "sim",
+  "created": "2026-10-29T18:01:56+00:00",
+  "host": "omarchy"
+}

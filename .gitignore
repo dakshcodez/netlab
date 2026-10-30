@@ -7,8 +7,6 @@ dist/
 build/
 .DS_Store
 
-# experiment outputs (regenerate with `make all`); keep curated plots in report/
-results/
 *.pcap
 *.pcapng
 /tmp/

@@ -1,0 +1,4 @@
+config,guess_space,entropy_bits,txid_predictability
+"weak: sequential ID, fixed port",1,0.0,1
+"random ID, fixed port",65536,16.0,0
+random ID + random port,4227858432,32.0,0

@@ -1,0 +1,124 @@
+{
+  "phase": "phase3",
+  "experiment": "tcp_bufferbloat",
+  "params": {
+    "bandwidth_mbps": 10.0,
+    "rtt_ms": 40.0,
+    "duration_s": 40,
+    "bdp_pkts": 34
+  },
+  "rows": [
+    {
+      "cc": "reno",
+      "buffer_pkts": 10,
+      "mean_rtt_ms": 44.0,
+      "throughput_mbps": 8.74
+    },
+    {
+      "cc": "reno",
+      "buffer_pkts": 20,
+      "mean_rtt_ms": 50.0,
+      "throughput_mbps": 9.55
+    },
+    {
+      "cc": "reno",
+      "buffer_pkts": 34,
+      "mean_rtt_ms": 60.9,
+      "throughput_mbps": 9.97
+    },
+    {
+      "cc": "reno",
+      "buffer_pkts": 100,
+      "mean_rtt_ms": 118.8,
+      "throughput_mbps": 10.0
+    },
+    {
+      "cc": "reno",
+      "buffer_pkts": 200,
+      "mean_rtt_ms": 188.0,
+      "throughput_mbps": 9.94
+    },
+    {
+      "cc": "reno",
+      "buffer_pkts": 400,
+      "mean_rtt_ms": 219.0,
+      "throughput_mbps": 10.0
+    },
+    {
+      "cc": "cubic",
+      "buffer_pkts": 10,
+      "mean_rtt_ms": 45.4,
+      "throughput_mbps": 9.79
+    },
+    {
+      "cc": "cubic",
+      "buffer_pkts": 20,
+      "mean_rtt_ms": 55.0,
+      "throughput_mbps": 10.0
+    },
+    {
+      "cc": "cubic",
+      "buffer_pkts": 34,
+      "mean_rtt_ms": 71.4,
+      "throughput_mbps": 10.0
+    },
+    {
+      "cc": "cubic",
+      "buffer_pkts": 100,
+      "mean_rtt_ms": 141.8,
+      "throughput_mbps": 10.0
+    },
+    {
+      "cc": "cubic",
+      "buffer_pkts": 200,
+      "mean_rtt_ms": 150.8,
+      "throughput_mbps": 9.91
+    },
+    {
+      "cc": "cubic",
+      "buffer_pkts": 400,
+      "mean_rtt_ms": 297.6,
+      "throughput_mbps": 9.97
+    },
+    {
+      "cc": "bbr",
+      "buffer_pkts": 10,
+      "mean_rtt_ms": 46.0,
+      "throughput_mbps": 10.0
+    },
+    {
+      "cc": "bbr",
+      "buffer_pkts": 20,
+      "mean_rtt_ms": 58.8,
+      "throughput_mbps": 9.98
+    },
+    {
+      "cc": "bbr",
+      "buffer_pkts": 34,
+      "mean_rtt_ms": 42.5,
+      "throughput_mbps": 10.0
+    },
+    {
+      "cc": "bbr",
+      "buffer_pkts": 100,
+      "mean_rtt_ms": 42.5,
+      "throughput_mbps": 10.0
+    },
+    {
+      "cc": "bbr",
+      "buffer_pkts": 200,
+      "mean_rtt_ms": 42.5,
+      "throughput_mbps": 10.0
+    },
+    {
+      "cc": "bbr",
+      "buffer_pkts": 400,
+      "mean_rtt_ms": 42.5,
+      "throughput_mbps": 10.0
+    }
+  ],
+  "summary": {},
+  "level": "sim",
+  "created": "2026-10-29T18:03:56+00:00",
+  "host": "omarchy"
+}

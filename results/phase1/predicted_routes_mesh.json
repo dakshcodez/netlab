@@ -1,0 +1,622 @@
+{
+  "phase": "phase1",
+  "experiment": "predicted_routes_mesh",
+  "params": {
+    "topology": "mesh"
+  },
+  "rows": [
+    {
+      "protocol": "rip",
+      "router": "r1",
+      "prefix": "10.0.0.132/30",
+      "metric": 2,
+      "next_hops": "10.0.0.130"
+    },
+    {
+      "protocol": "rip",
+      "router": "r1",
+      "prefix": "10.0.0.144/30",
+      "metric": 2,
+      "next_hops": "10.0.0.130 10.0.0.142"
+    },
+    {
+      "protocol": "rip",
+      "router": "r1",
+      "prefix": "10.0.0.148/30",
+      "metric": 3,
+      "next_hops": "10.0.0.130 10.0.0.142"
+    },
+    {
+      "protocol": "rip",
+      "router": "r1",
+      "prefix": "10.0.0.152/30",
+      "metric": 2,
+      "next_hops": "10.0.0.138 10.0.0.142"
+    },
+    {
+      "protocol": "rip",
+      "router": "r1",
+      "prefix": "10.0.0.156/30",
+      "metric": 2,
+      "next_hops": "10.0.0.142"
+    },
+    {
+      "protocol": "rip",
+      "router": "r1",
+      "prefix": "10.0.0.64/26",
+      "metric": 3,
+      "next_hops": "10.0.0.142"
+    },
+    {
+      "protocol": "rip",
+      "router": "r2",
+      "prefix": "10.0.0.0/26",
+      "metric": 2,
+      "next_hops": "10.0.0.129"
+    },
+    {
+      "protocol": "rip",
+      "router": "r2",
+      "prefix": "10.0.0.136/30",
+      "metric": 2,
+      "next_hops": "10.0.0.129"
+    },
+    {
+      "protocol": "rip",
+      "router": "r2",
+      "prefix": "10.0.0.140/30",
+      "metric": 2,
+      "next_hops": "10.0.0.129 10.0.0.146"
+    },
+    {
+      "protocol": "rip",
+      "router": "r2",
+      "prefix": "10.0.0.148/30",
+      "metric": 2,
+      "next_hops": "10.0.0.134"
+    },
+    {
+      "protocol": "rip",
+      "router": "r2",
+      "prefix": "10.0.0.152/30",
+      "metric": 2,
+      "next_hops": "10.0.0.146"
+    },
+    {
+      "protocol": "rip",
+      "router": "r2",
+      "prefix": "10.0.0.156/30",
+      "metric": 2,
+      "next_hops": "10.0.0.146"
+    },
+    {
+      "protocol": "rip",
+      "router": "r2",
+      "prefix": "10.0.0.64/26",
+      "metric": 3,
+      "next_hops": "10.0.0.134 10.0.0.146"
+    },
+    {
+      "protocol": "rip",
+      "router": "r3",
+      "prefix": "10.0.0.0/26",
+      "metric": 3,
+      "next_hops": "10.0.0.133"
+    },
+    {
+      "protocol": "rip",
+      "router": "r3",
+      "prefix": "10.0.0.128/30",
+      "metric": 2,
+      "next_hops": "10.0.0.133"
+    },
+    {
+      "protocol": "rip",
+      "router": "r3",
+      "prefix": "10.0.0.136/30",
+      "metric": 3,
+      "next_hops": "10.0.0.133"
+    },
+    {
+      "protocol": "rip",
+      "router": "r3",
+      "prefix": "10.0.0.140/30",
+      "metric": 3,
+      "next_hops": "10.0.0.133 10.0.0.150"
+    },
+    {
+      "protocol": "rip",
+      "router": "r3",
+      "prefix": "10.0.0.144/30",
+      "metric": 2,
+      "next_hops": "10.0.0.133"
+    },
+    {
+      "protocol": "rip",
+      "router": "r3",
+      "prefix": "10.0.0.152/30",
+      "metric": 3,
+      "next_hops": "10.0.0.133 10.0.0.150"
+    },
+    {
+      "protocol": "rip",
+      "router": "r3",
+      "prefix": "10.0.0.156/30",
+      "metric": 2,
+      "next_hops": "10.0.0.150"
+    },
+    {
+      "protocol": "rip",
+      "router": "r3",
+      "prefix": "10.0.0.64/26",
+      "metric": 2,
+      "next_hops": "10.0.0.150"
+    },
+    {
+      "protocol": "rip",
+      "router": "r4",
+      "prefix": "10.0.0.0/26",
+      "metric": 2,
+      "next_hops": "10.0.0.137"
+    },
+    {
+      "protocol": "rip",
+      "router": "r4",
+      "prefix": "10.0.0.128/30",
+      "metric": 2,
+      "next_hops": "10.0.0.137"
+    },
+    {
+      "protocol": "rip",
+      "router": "r4",
+      "prefix": "10.0.0.132/30",
+      "metric": 3,
+      "next_hops": "10.0.0.137 10.0.0.154"
+    },
+    {
+      "protocol": "rip",
+      "router": "r4",
+      "prefix": "10.0.0.140/30",
+      "metric": 2,
+      "next_hops": "10.0.0.137 10.0.0.154"
+    },
+    {
+      "protocol": "rip",
+      "router": "r4",
+      "prefix": "10.0.0.144/30",
+      "metric": 2,
+      "next_hops": "10.0.0.154"
+    },
+    {
+      "protocol": "rip",
+      "router": "r4",
+      "prefix": "10.0.0.148/30",
+      "metric": 3,
+      "next_hops": "10.0.0.154"
+    },
+    {
+      "protocol": "rip",
+      "router": "r4",
+      "prefix": "10.0.0.156/30",
+      "metric": 2,
+      "next_hops": "10.0.0.154"
+    },
+    {
+      "protocol": "rip",
+      "router": "r4",
+      "prefix": "10.0.0.64/26",
+      "metric": 3,
+      "next_hops": "10.0.0.154"
+    },
+    {
+      "protocol": "rip",
+      "router": "r5",
+      "prefix": "10.0.0.0/26",
+      "metric": 2,
+      "next_hops": "10.0.0.141"
+    },
+    {
+      "protocol": "rip",
+      "router": "r5",
+      "prefix": "10.0.0.128/30",
+      "metric": 2,
+      "next_hops": "10.0.0.141 10.0.0.145"
+    },
+    {
+      "protocol": "rip",
+      "router": "r5",
+      "prefix": "10.0.0.132/30",
+      "metric": 2,
+      "next_hops": "10.0.0.145"
+    },
+    {
+      "protocol": "rip",
+      "router": "r5",
+      "prefix": "10.0.0.136/30",
+      "metric": 2,
+      "next_hops": "10.0.0.141 10.0.0.153"
+    },
+    {
+      "protocol": "rip",
+      "router": "r5",
+      "prefix": "10.0.0.148/30",
+      "metric": 2,
+      "next_hops": "10.0.0.158"
+    },
+    {
+      "protocol": "rip",
+      "router": "r5",
+      "prefix": "10.0.0.64/26",
+      "metric": 2,
+      "next_hops": "10.0.0.158"
+    },
+    {
+      "protocol": "rip",
+      "router": "r6",
+      "prefix": "10.0.0.0/26",
+      "metric": 3,
+      "next_hops": "10.0.0.157"
+    },
+    {
+      "protocol": "rip",
+      "router": "r6",
+      "prefix": "10.0.0.128/30",
+      "metric": 3,
+      "next_hops": "10.0.0.149 10.0.0.157"
+    },
+    {
+      "protocol": "rip",
+      "router": "r6",
+      "prefix": "10.0.0.132/30",
+      "metric": 2,
+      "next_hops": "10.0.0.149"
+    },
+    {
+      "protocol": "rip",
+      "router": "r6",
+      "prefix": "10.0.0.136/30",
+      "metric": 3,
+      "next_hops": "10.0.0.157"
+    },
+    {
+      "protocol": "rip",
+      "router": "r6",
+      "prefix": "10.0.0.140/30",
+      "metric": 2,
+      "next_hops": "10.0.0.157"
+    },
+    {
+      "protocol": "rip",
+      "router": "r6",
+      "prefix": "10.0.0.144/30",
+      "metric": 2,
+      "next_hops": "10.0.0.157"
+    },
+    {
+      "protocol": "rip",
+      "router": "r6",
+      "prefix": "10.0.0.152/30",
+      "metric": 2,
+      "next_hops": "10.0.0.157"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r1",
+      "prefix": "10.0.0.132/30",
+      "metric": 110,
+      "next_hops": "10.0.0.130"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r1",
+      "prefix": "10.0.0.144/30",
+      "metric": 11,
+      "next_hops": "10.0.0.142"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r1",
+      "prefix": "10.0.0.148/30",
+      "metric": 12,
+      "next_hops": "10.0.0.142"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r1",
+      "prefix": "10.0.0.152/30",
+      "metric": 11,
+      "next_hops": "10.0.0.142"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r1",
+      "prefix": "10.0.0.156/30",
+      "metric": 2,
+      "next_hops": "10.0.0.142"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r1",
+      "prefix": "10.0.0.64/26",
+      "metric": 12,
+      "next_hops": "10.0.0.142"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r2",
+      "prefix": "10.0.0.0/26",
+      "metric": 20,
+      "next_hops": "10.0.0.129"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r2",
+      "prefix": "10.0.0.136/30",
+      "metric": 110,
+      "next_hops": "10.0.0.129"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r2",
+      "prefix": "10.0.0.140/30",
+      "metric": 11,
+      "next_hops": "10.0.0.129 10.0.0.146"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r2",
+      "prefix": "10.0.0.148/30",
+      "metric": 21,
+      "next_hops": "10.0.0.146"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r2",
+      "prefix": "10.0.0.152/30",
+      "metric": 20,
+      "next_hops": "10.0.0.146"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r2",
+      "prefix": "10.0.0.156/30",
+      "metric": 11,
+      "next_hops": "10.0.0.146"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r2",
+      "prefix": "10.0.0.64/26",
+      "metric": 21,
+      "next_hops": "10.0.0.146"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r3",
+      "prefix": "10.0.0.0/26",
+      "metric": 22,
+      "next_hops": "10.0.0.150"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r3",
+      "prefix": "10.0.0.128/30",
+      "metric": 22,
+      "next_hops": "10.0.0.150"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r3",
+      "prefix": "10.0.0.136/30",
+      "metric": 112,
+      "next_hops": "10.0.0.150"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r3",
+      "prefix": "10.0.0.140/30",
+      "metric": 12,
+      "next_hops": "10.0.0.150"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r3",
+      "prefix": "10.0.0.144/30",
+      "metric": 21,
+      "next_hops": "10.0.0.150"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r3",
+      "prefix": "10.0.0.152/30",
+      "metric": 21,
+      "next_hops": "10.0.0.150"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r3",
+      "prefix": "10.0.0.156/30",
+      "metric": 11,
+      "next_hops": "10.0.0.150"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r3",
+      "prefix": "10.0.0.64/26",
+      "metric": 20,
+      "next_hops": "10.0.0.150"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r4",
+      "prefix": "10.0.0.0/26",
+      "metric": 21,
+      "next_hops": "10.0.0.154"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r4",
+      "prefix": "10.0.0.128/30",
+      "metric": 21,
+      "next_hops": "10.0.0.154"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r4",
+      "prefix": "10.0.0.132/30",
+      "metric": 120,
+      "next_hops": "10.0.0.154"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r4",
+      "prefix": "10.0.0.140/30",
+      "metric": 11,
+      "next_hops": "10.0.0.154"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r4",
+      "prefix": "10.0.0.144/30",
+      "metric": 20,
+      "next_hops": "10.0.0.154"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r4",
+      "prefix": "10.0.0.148/30",
+      "metric": 21,
+      "next_hops": "10.0.0.154"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r4",
+      "prefix": "10.0.0.156/30",
+      "metric": 11,
+      "next_hops": "10.0.0.154"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r4",
+      "prefix": "10.0.0.64/26",
+      "metric": 21,
+      "next_hops": "10.0.0.154"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r5",
+      "prefix": "10.0.0.0/26",
+      "metric": 11,
+      "next_hops": "10.0.0.141"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r5",
+      "prefix": "10.0.0.128/30",
+      "metric": 11,
+      "next_hops": "10.0.0.141"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r5",
+      "prefix": "10.0.0.132/30",
+      "metric": 110,
+      "next_hops": "10.0.0.145"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r5",
+      "prefix": "10.0.0.136/30",
+      "metric": 101,
+      "next_hops": "10.0.0.141"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r5",
+      "prefix": "10.0.0.148/30",
+      "metric": 11,
+      "next_hops": "10.0.0.158"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r5",
+      "prefix": "10.0.0.64/26",
+      "metric": 11,
+      "next_hops": "10.0.0.158"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r6",
+      "prefix": "10.0.0.0/26",
+      "metric": 12,
+      "next_hops": "10.0.0.157"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r6",
+      "prefix": "10.0.0.128/30",
+      "metric": 12,
+      "next_hops": "10.0.0.157"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r6",
+      "prefix": "10.0.0.132/30",
+      "metric": 110,
+      "next_hops": "10.0.0.149"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r6",
+      "prefix": "10.0.0.136/30",
+      "metric": 102,
+      "next_hops": "10.0.0.157"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r6",
+      "prefix": "10.0.0.140/30",
+      "metric": 2,
+      "next_hops": "10.0.0.157"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r6",
+      "prefix": "10.0.0.144/30",
+      "metric": 11,
+      "next_hops": "10.0.0.157"
+    },
+    {
+      "protocol": "ospf",
+      "router": "r6",
+      "prefix": "10.0.0.152/30",
+      "metric": 11,
+      "next_hops": "10.0.0.157"
+    }
+  ],
+  "summary": {
+    "rip": {
+      "path": [
+        "h1",
+        "r1",
+        "r5",
+        "r6",
+        "h2"
+      ],
+      "bottleneck_mbps": 100.0
+    },
+    "ospf": {
+      "path": [
+        "h1",
+        "r1",
+        "r5",
+        "r6",
+        "h2"
+      ],
+      "bottleneck_mbps": 100.0
+    }
+  },
+  "level": "sim",
+  "created": "2026-10-29T18:01:55+00:00",
+  "host": "omarchy"
+}

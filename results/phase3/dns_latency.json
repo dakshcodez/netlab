@@ -1,0 +1,404 @@
+{
+  "phase": "phase3",
+  "experiment": "dns_latency",
+  "params": {
+    "mode": "loopback sockets, emulated delay",
+    "hop_rtt_ms": 20.0,
+    "client_rtt_ms": 2.0,
+    "repeats": 10
+  },
+  "rows": [
+    {
+      "repeat": 0,
+      "step": "cold: www.example.lab",
+      "rtt_ms": 64.7973169980105,
+      "rcode": 0,
+      "note": "walks root \u2192 TLD \u2192 authoritative (3 upstream queries)"
+    },
+    {
+      "repeat": 0,
+      "step": "warm: www.example.lab again",
+      "rtt_ms": 2.5385360058862716,
+      "rcode": 0,
+      "note": "answer cached"
+    },
+    {
+      "repeat": 0,
+      "step": "sibling: mail.example.lab",
+      "rtt_ms": 23.12958100810647,
+      "rcode": 0,
+      "note": "delegations cached \u2192 only the authoritative server"
+    },
+    {
+      "repeat": 0,
+      "step": "NXDOMAIN: ghost.example.lab",
+      "rtt_ms": 23.198908995254897,
+      "rcode": 3,
+      "note": "one upstream query, result negatively cached"
+    },
+    {
+      "repeat": 0,
+      "step": "NXDOMAIN again",
+      "rtt_ms": 2.501540002413094,
+      "rcode": 3,
+      "note": "negative cache hit"
+    },
+    {
+      "repeat": 1,
+      "step": "cold: www.example.lab",
+      "rtt_ms": 64.53108899586368,
+      "rcode": 0,
+      "note": "walks root \u2192 TLD \u2192 authoritative (3 upstream queries)"
+    },
+    {
+      "repeat": 1,
+      "step": "warm: www.example.lab again",
+      "rtt_ms": 2.5154449976980686,
+      "rcode": 0,
+      "note": "answer cached"
+    },
+    {
+      "repeat": 1,
+      "step": "sibling: mail.example.lab",
+      "rtt_ms": 23.15434199408628,
+      "rcode": 0,
+      "note": "delegations cached \u2192 only the authoritative server"
+    },
+    {
+      "repeat": 1,
+      "step": "NXDOMAIN: ghost.example.lab",
+      "rtt_ms": 23.020795997581445,
+      "rcode": 3,
+      "note": "one upstream query, result negatively cached"
+    },
+    {
+      "repeat": 1,
+      "step": "NXDOMAIN again",
+      "rtt_ms": 2.464304998284206,
+      "rcode": 3,
+      "note": "negative cache hit"
+    },
+    {
+      "repeat": 2,
+      "step": "cold: www.example.lab",
+      "rtt_ms": 64.65871899854392,
+      "rcode": 0,
+      "note": "walks root \u2192 TLD \u2192 authoritative (3 upstream queries)"
+    },
+    {
+      "repeat": 2,
+      "step": "warm: www.example.lab again",
+      "rtt_ms": 2.470285995514132,
+      "rcode": 0,
+      "note": "answer cached"
+    },
+    {
+      "repeat": 2,
+      "step": "sibling: mail.example.lab",
+      "rtt_ms": 23.204886994790286,
+      "rcode": 0,
+      "note": "delegations cached \u2192 only the authoritative server"
+    },
+    {
+      "repeat": 2,
+      "step": "NXDOMAIN: ghost.example.lab",
+      "rtt_ms": 23.110718000680208,
+      "rcode": 3,
+      "note": "one upstream query, result negatively cached"
+    },
+    {
+      "repeat": 2,
+      "step": "NXDOMAIN again",
+      "rtt_ms": 2.414458998828195,
+      "rcode": 3,
+      "note": "negative cache hit"
+    },
+    {
+      "repeat": 3,
+      "step": "cold: www.example.lab",
+      "rtt_ms": 64.61471899820026,
+      "rcode": 0,
+      "note": "walks root \u2192 TLD \u2192 authoritative (3 upstream queries)"
+    },
+    {
+      "repeat": 3,
+      "step": "warm: www.example.lab again",
+      "rtt_ms": 2.54241400398314,
+      "rcode": 0,
+      "note": "answer cached"
+    },
+    {
+      "repeat": 3,
+      "step": "sibling: mail.example.lab",
+      "rtt_ms": 23.05082799284719,
+      "rcode": 0,
+      "note": "delegations cached \u2192 only the authoritative server"
+    },
+    {
+      "repeat": 3,
+      "step": "NXDOMAIN: ghost.example.lab",
+      "rtt_ms": 23.189391009509563,
+      "rcode": 3,
+      "note": "one upstream query, result negatively cached"
+    },
+    {
+      "repeat": 3,
+      "step": "NXDOMAIN again",
+      "rtt_ms": 2.417715993942693,
+      "rcode": 3,
+      "note": "negative cache hit"
+    },
+    {
+      "repeat": 4,
+      "step": "cold: www.example.lab",
+      "rtt_ms": 64.46203199448064,
+      "rcode": 0,
+      "note": "walks root \u2192 TLD \u2192 authoritative (3 upstream queries)"
+    },
+    {
+      "repeat": 4,
+      "step": "warm: www.example.lab again",
+      "rtt_ms": 2.4835100048221648,
+      "rcode": 0,
+      "note": "answer cached"
+    },
+    {
+      "repeat": 4,
+      "step": "sibling: mail.example.lab",
+      "rtt_ms": 23.085756998625584,
+      "rcode": 0,
+      "note": "delegations cached \u2192 only the authoritative server"
+    },
+    {
+      "repeat": 4,
+      "step": "NXDOMAIN: ghost.example.lab",
+      "rtt_ms": 23.27008701104205,
+      "rcode": 3,
+      "note": "one upstream query, result negatively cached"
+    },
+    {
+      "repeat": 4,
+      "step": "NXDOMAIN again",
+      "rtt_ms": 2.4081939918687567,
+      "rcode": 3,
+      "note": "negative cache hit"
+    },
+    {
+      "repeat": 5,
+      "step": "cold: www.example.lab",
+      "rtt_ms": 64.38873300794512,
+      "rcode": 0,
+      "note": "walks root \u2192 TLD \u2192 authoritative (3 upstream queries)"
+    },
+    {
+      "repeat": 5,
+      "step": "warm: www.example.lab again",
+      "rtt_ms": 2.5597589992685243,
+      "rcode": 0,
+      "note": "answer cached"
+    },
+    {
+      "repeat": 5,
+      "step": "sibling: mail.example.lab",
+      "rtt_ms": 23.035007005091757,
+      "rcode": 0,
+      "note": "delegations cached \u2192 only the authoritative server"
+    },
+    {
+      "repeat": 5,
+      "step": "NXDOMAIN: ghost.example.lab",
+      "rtt_ms": 23.20528498967178,
+      "rcode": 3,
+      "note": "one upstream query, result negatively cached"
+    },
+    {
+      "repeat": 5,
+      "step": "NXDOMAIN again",
+      "rtt_ms": 2.390191992162727,
+      "rcode": 3,
+      "note": "negative cache hit"
+    },
+    {
+      "repeat": 6,
+      "step": "cold: www.example.lab",
+      "rtt_ms": 64.42239000170957,
+      "rcode": 0,
+      "note": "walks root \u2192 TLD \u2192 authoritative (3 upstream queries)"
+    },
+    {
+      "repeat": 6,
+      "step": "warm: www.example.lab again",
+      "rtt_ms": 2.3946790024638176,
+      "rcode": 0,
+      "note": "answer cached"
+    },
+    {
+      "repeat": 6,
+      "step": "sibling: mail.example.lab",
+      "rtt_ms": 22.90046599227935,
+      "rcode": 0,
+      "note": "delegations cached \u2192 only the authoritative server"
+    },
+    {
+      "repeat": 6,
+      "step": "NXDOMAIN: ghost.example.lab",
+      "rtt_ms": 23.059254002873786,
+      "rcode": 3,
+      "note": "one upstream query, result negatively cached"
+    },
+    {
+      "repeat": 6,
+      "step": "NXDOMAIN again",
+      "rtt_ms": 2.435294009046629,
+      "rcode": 3,
+      "note": "negative cache hit"
+    },
+    {
+      "repeat": 7,
+      "step": "cold: www.example.lab",
+      "rtt_ms": 64.50658300309442,
+      "rcode": 0,
+      "note": "walks root \u2192 TLD \u2192 authoritative (3 upstream queries)"
+    },
+    {
+      "repeat": 7,
+      "step": "warm: www.example.lab again",
+      "rtt_ms": 2.526593001675792,
+      "rcode": 0,
+      "note": "answer cached"
+    },
+    {
+      "repeat": 7,
+      "step": "sibling: mail.example.lab",
+      "rtt_ms": 23.094952004612423,
+      "rcode": 0,
+      "note": "delegations cached \u2192 only the authoritative server"
+    },
+    {
+      "repeat": 7,
+      "step": "NXDOMAIN: ghost.example.lab",
+      "rtt_ms": 23.105739994207397,
+      "rcode": 3,
+      "note": "one upstream query, result negatively cached"
+    },
+    {
+      "repeat": 7,
+      "step": "NXDOMAIN again",
+      "rtt_ms": 2.3751650005578995,
+      "rcode": 3,
+      "note": "negative cache hit"
+    },
+    {
+      "repeat": 8,
+      "step": "cold: www.example.lab",
+      "rtt_ms": 64.47391599067487,
+      "rcode": 0,
+      "note": "walks root \u2192 TLD \u2192 authoritative (3 upstream queries)"
+    },
+    {
+      "repeat": 8,
+      "step": "warm: www.example.lab again",
+      "rtt_ms": 2.477503992849961,
+      "rcode": 0,
+      "note": "answer cached"
+    },
+    {
+      "repeat": 8,
+      "step": "sibling: mail.example.lab",
+      "rtt_ms": 23.27256200078409,
+      "rcode": 0,
+      "note": "delegations cached \u2192 only the authoritative server"
+    },
+    {
+      "repeat": 8,
+      "step": "NXDOMAIN: ghost.example.lab",
+      "rtt_ms": 23.178671995992772,
+      "rcode": 3,
+      "note": "one upstream query, result negatively cached"
+    },
+    {
+      "repeat": 8,
+      "step": "NXDOMAIN again",
+      "rtt_ms": 2.3949239985086024,
+      "rcode": 3,
+      "note": "negative cache hit"
+    },
+    {
+      "repeat": 9,
+      "step": "cold: www.example.lab",
+      "rtt_ms": 64.6864239970455,
+      "rcode": 0,
+      "note": "walks root \u2192 TLD \u2192 authoritative (3 upstream queries)"
+    },
+    {
+      "repeat": 9,
+      "step": "warm: www.example.lab again",
+      "rtt_ms": 2.431996996165253,
+      "rcode": 0,
+      "note": "answer cached"
+    },
+    {
+      "repeat": 9,
+      "step": "sibling: mail.example.lab",
+      "rtt_ms": 23.1709710060386,
+      "rcode": 0,
+      "note": "delegations cached \u2192 only the authoritative server"
+    },
+    {
+      "repeat": 9,
+      "step": "NXDOMAIN: ghost.example.lab",
+      "rtt_ms": 23.58228999946732,
+      "rcode": 3,
+      "note": "one upstream query, result negatively cached"
+    },
+    {
+      "repeat": 9,
+      "step": "NXDOMAIN again",
+      "rtt_ms": 2.496635992429219,
+      "rcode": 3,
+      "note": "negative cache hit"
+    }
+  ],
+  "summary": {
+    "steps": [
+      {
+        "step": "cold: www.example.lab",
+        "median_ms": 64.52,
+        "min_ms": 64.39,
+        "max_ms": 64.8,
+        "note": "walks root \u2192 TLD \u2192 authoritative (3 upstream queries)"
+      },
+      {
+        "step": "warm: www.example.lab again",
+        "median_ms": 2.5,
+        "min_ms": 2.39,
+        "max_ms": 2.56,
+        "note": "answer cached"
+      },
+      {
+        "step": "sibling: mail.example.lab",
+        "median_ms": 23.11,
+        "min_ms": 22.9,
+        "max_ms": 23.27,
+        "note": "delegations cached \u2192 only the authoritative server"
+      },
+      {
+        "step": "NXDOMAIN: ghost.example.lab",
+        "median_ms": 23.18,
+        "min_ms": 23.02,
+        "max_ms": 23.58,
+        "note": "one upstream query, result negatively cached"
+      },
+      {
+        "step": "NXDOMAIN again",
+        "median_ms": 2.42,
+        "min_ms": 2.38,
+        "max_ms": 2.5,
+        "note": "negative cache hit"
+      }
+    ]
+  },
+  "level": "real",
+  "created": "2026-10-29T18:03:50+00:00",
+  "host": "omarchy"
+}

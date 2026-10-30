@@ -1,0 +1,37 @@
+{
+  "phase": "phase3",
+  "experiment": "tcp_cwnd",
+  "params": {
+    "bandwidth_mbps": 10.0,
+    "rtt_ms": 40.0,
+    "buffer_pkts": 34,
+    "duration_s": 30
+  },
+  "rows": [
+    {
+      "cc": "reno",
+      "throughput_mbps": 9.96,
+      "retransmissions": 83,
+      "timeouts": 0,
+      "mean_rtt_ms": 61.2
+    },
+    {
+      "cc": "cubic",
+      "throughput_mbps": 10.0,
+      "retransmissions": 170,
+      "timeouts": 1,
+      "mean_rtt_ms": 71.3
+    },
+    {
+      "cc": "bbr",
+      "throughput_mbps": 10.0,
+      "retransmissions": 68,
+      "timeouts": 0,
+      "mean_rtt_ms": 42.5
+    }
+  ],
+  "summary": {},
+  "level": "sim",
+  "created": "2026-10-29T18:03:52+00:00",
+  "host": "omarchy"
+}

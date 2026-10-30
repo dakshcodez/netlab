@@ -1,0 +1,4 @@
+cc,sim_retransmissions,analyzer_retransmissions,sim_rtt_median_ms,analyzer_rtt_median_ms,sim_mbps,analyzer_mbps,analyzer_syn_to_synack_ms
+reno,78,78,61.4,62.553,9.93,9.9423,40.0
+cubic,166,166,72.98,74.137,9.41,9.4335,40.0
+bbr,68,68,41.16,41.159,9.94,9.9441,40.0

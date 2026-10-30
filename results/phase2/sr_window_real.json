@@ -1,0 +1,44 @@
+{
+  "phase": "phase2",
+  "experiment": "sr_window_real",
+  "params": {
+    "a": 5.0,
+    "packets": 150,
+    "runs": 10,
+    "payload_bytes": 1000,
+    "rate_bps": 4000000.0
+  },
+  "rows": [
+    {
+      "scenario": "S1 (low loss, 1%)",
+      "loss": 0.01,
+      "baseline_mean": 0.8709392810426129,
+      "baseline_sd": 0.04924566281867279,
+      "proposed_mean": 0.8721149657162535,
+      "proposed_sd": 0.049202619665530835,
+      "improvement_pct": 0.13499042921030213
+    },
+    {
+      "scenario": "S2 (medium loss, 5%)",
+      "loss": 0.05,
+      "baseline_mean": 0.7024279182956676,
+      "baseline_sd": 0.062065687535230334,
+      "proposed_mean": 0.7541198480049455,
+      "proposed_sd": 0.061216090479202345,
+      "improvement_pct": 7.359036900853866
+    },
+    {
+      "scenario": "S3 (high loss, 20%)",
+      "loss": 0.2,
+      "baseline_mean": 0.4432590541517874,
+      "baseline_sd": 0.03872169861258873,
+      "proposed_mean": 0.5524421665418753,
+      "proposed_sd": 0.04831965605429405,
+      "improvement_pct": 24.631896713089986
+    }
+  ],
+  "summary": {},
+  "level": "real",
+  "created": "2026-10-29T18:09:11+00:00",
+  "host": "omarchy"
+}

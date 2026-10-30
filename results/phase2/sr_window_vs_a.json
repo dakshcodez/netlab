@@ -1,0 +1,55 @@
+{
+  "phase": "phase2",
+  "experiment": "sr_window_vs_a",
+  "params": {
+    "loss": 0.05,
+    "packets": 3000,
+    "runs": 10
+  },
+  "rows": [
+    {
+      "a": 1.0,
+      "baseline_window": 3,
+      "proposed_window": 6,
+      "baseline_mean": 0.8730010098726223,
+      "baseline_sd": 0.011976396062322307,
+      "proposed_mean": 0.8870882383949237,
+      "proposed_sd": 0.00805718409325111,
+      "improvement_pct": 1.6136554669457626
+    },
+    {
+      "a": 5.0,
+      "baseline_window": 11,
+      "proposed_window": 22,
+      "baseline_mean": 0.7168627562243072,
+      "baseline_sd": 0.015698047275501434,
+      "proposed_mean": 0.7757789760060054,
+      "proposed_sd": 0.008531281433287932,
+      "improvement_pct": 8.21861915271036
+    },
+    {
+      "a": 10.0,
+      "baseline_window": 21,
+      "proposed_window": 42,
+      "baseline_mean": 0.6386474026386096,
+      "baseline_sd": 0.011932267685687661,
+      "proposed_mean": 0.7191928601708817,
+      "proposed_sd": 0.011538622721051443,
+      "improvement_pct": 12.611882112022021
+    },
+    {
+      "a": 20.0,
+      "baseline_window": 41,
+      "proposed_window": 82,
+      "baseline_mean": 0.567311724443144,
+      "baseline_sd": 0.014403358684757065,
+      "proposed_mean": 0.6739870408620935,
+      "proposed_sd": 0.013867395415537997,
+      "improvement_pct": 18.80365094228551
+    }
+  ],
+  "summary": {},
+  "level": "sim",
+  "created": "2026-10-29T18:09:05+00:00",
+  "host": "omarchy"
+}

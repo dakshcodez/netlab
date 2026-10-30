@@ -1,0 +1,4 @@
+cc,throughput_mbps,retransmissions,timeouts,mean_rtt_ms
+reno,9.96,83,0,61.2
+cubic,10.0,170,1,71.3
+bbr,10.0,68,0,42.5

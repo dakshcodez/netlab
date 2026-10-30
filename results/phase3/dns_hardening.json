@@ -1,0 +1,31 @@
+{
+  "phase": "phase3",
+  "experiment": "dns_hardening",
+  "params": {
+    "samples": 2000
+  },
+  "rows": [
+    {
+      "config": "weak: sequential ID, fixed port",
+      "guess_space": 1,
+      "entropy_bits": 0.0,
+      "txid_predictability": 1
+    },
+    {
+      "config": "random ID, fixed port",
+      "guess_space": 65536,
+      "entropy_bits": 16.0,
+      "txid_predictability": 0
+    },
+    {
+      "config": "random ID + random port",
+      "guess_space": 4227858432,
+      "entropy_bits": 32.0,
+      "txid_predictability": 0
+    }
+  ],
+  "summary": {},
+  "level": "sim",
+  "created": "2026-10-29T18:03:52+00:00",
+  "host": "omarchy"
+}
